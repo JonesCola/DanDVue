@@ -24,7 +24,7 @@
          <div>stats text</div>
       </div>
       <div class="column">
-       <div> some text</div>
+       <div> Life component </div>
       </div>
     </div>
   </section>
@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import Character from '@/models/character';
 
 @Component
@@ -44,6 +44,6 @@ export default class CharacterSheet extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>
