@@ -16,12 +16,7 @@
   <section>
     <div class="columns is-multiline">
       <div class="column is-one-quarter">
-        <!-- this needs to be a component with a prop that take an array of stat  -->
-         <div>stats text</div>
-         <div>stats text</div>
-         <div>stats text</div>
-         <div>stats text</div>
-         <div>stats text</div>
+        <StatComponent v-for="(s, i) in character.stats" :key="i" :stat=s></StatComponent>
       </div>
       <div class="column">
        <div> Life component </div>
@@ -34,8 +29,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Character from '@/models/character';
+import StatComponent from './StatComponent.vue';
 
-@Component
+@Component({
+  components : { StatComponent },
+  })
 export default class CharacterSheet extends Vue {
     character = new Character();
     async created() {
