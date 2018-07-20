@@ -23,13 +23,13 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="body">
     <div class="columns">
       <div class="column is-2">
         <StatComponent v-for="(s, i) in character.stats" :key="i" :stat=s></StatComponent>
       </div>
       <div class="column is-2">
-        <div class="box">Proficiency Bonus: <input class="numberWidth" type="number" v-model="character.proficiencyBonus"/></div>
+        <div class="box">Proficiency Bonus:<input class="numberWidth" type="number" v-model="character.proficiencyBonus"/></div>
         <div class="box is-rounded">
           <div> Saving Throws </div>
           <SavingThrow v-for="(s, i) in character.stats" :key="i" :stat=s :proficiency="character.proficiencyBonus"></SavingThrow>
@@ -41,7 +41,7 @@
        <div> equipment</div>
       </div>
       <div class="column is-3">
-        personality traits
+        <Personality :character="character"></Personality>
       </div>
     </div>
   </section>
@@ -65,5 +65,8 @@ module.exports = require('./CharacterSheet.ts');
   }
   .numberWidth {
     width: 22px;
+  }
+  .body {
+    margin-top: 6px;
   }
 </style>
