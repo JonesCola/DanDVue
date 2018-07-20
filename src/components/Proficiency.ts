@@ -5,5 +5,6 @@ import { statType } from '@/models/statType';
 @Component
 export default class StatComponent extends Vue {
   @Prop() stat! : Stat;
+  
   statType = statType;
 }

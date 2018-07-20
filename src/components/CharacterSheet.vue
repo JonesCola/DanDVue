@@ -22,7 +22,7 @@
   </section>
   <section>
     <div class="columns">
-      <div class="column is-1">
+      <div class="column is-2">
         <StatComponent v-for="(s, i) in character.stats" :key="i" :stat=s></StatComponent>
       </div>
       <div class="column is-2">
@@ -46,12 +46,12 @@
 module.exports = require('./CharacterSheet.ts');
 </script>
 <style lang="scss" scoped>
-.charName{ 
-  font-size: 28px; 
+.charName{
+  font-size: 28px;
   height: 32px;
   }
-.disabledInput { 
-  display: none; 
+.disabledInput {
+  display: none;
   }
   .padRight {
     padding-right: 8px
