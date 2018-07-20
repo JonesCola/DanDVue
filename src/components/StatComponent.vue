@@ -1,7 +1,7 @@
 <template>
 <div class="box is-rounded">
-    <div>{{stat.description}}</div>
-    <div>{{stat.value}}</div>
+    <div>{{stat.description}} <input type="text" v-model="stat.value"></div>
+    <div>roll modifier: {{stat.value | rollModifier}} </div>
 </div>
 </template>
 
@@ -9,14 +9,9 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import Stat from '@/models/stat';
 
-@Component
+@Component({filters: {rollModifier(stat: number){ return Math.round((stat - 1) / 2) - 5; } }
+})
 export default class StatComponent extends Vue {
-  constructor (){
-    this.stat = new Stat();
-    super();
-  }
-
-  @Prop()
-  stat : Stat;
+  @Prop() stat! : Stat;
 }
 </script>
