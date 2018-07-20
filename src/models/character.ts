@@ -1,5 +1,5 @@
-import Stat from './stat';
-import Attack from './attack';
+import Stat from '@/models/stat';
+import Attack from '@/models/attack';
 
 export default class Character {
     public characterName : string = '';
@@ -13,4 +13,8 @@ export default class Character {
     public bonds: string = '';
     public flaws: string = '';
     public notes: string = '';
+    public class: string = '';
+    public race: string = '';
+    public alignment: string = '';
+    public background: string = '';
 }

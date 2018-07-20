@@ -21,10 +21,15 @@ export default new Vuex.Store({
       ret.exp = 3250;
       ret.characterName = 'Balthasar';
       ret.playerName = 'Aaron';
+      ret.race = 'Dwarf';
+      ret.class = 'Barbarian';
+      ret.alignment = 'lawful/good';
+      ret.background = 'Soldier';
 
       const strengthStat = new Stat();
       strengthStat.type = statType.Strength;
       strengthStat.value = 15;
+      strengthStat.isProficient = true;
 
       const dexStat = new Stat();
       dexStat.type = statType.Dexterity;
@@ -33,6 +38,7 @@ export default new Vuex.Store({
       const constStat = new Stat();
       constStat.type = statType.Constitution;
       constStat.value = 14;
+      constStat.isProficient = true;
 
       const intStat = new Stat();
       intStat.type = statType.Intelligence;

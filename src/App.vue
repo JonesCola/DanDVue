@@ -25,4 +25,14 @@
     }
   }
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input {
+  padding-left: 2px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  }
 </style>

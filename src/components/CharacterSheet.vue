@@ -9,13 +9,16 @@
       </div>
       <div class=columns>
         <div class="column">
-            played by: <input v-model="character.playerName"/>
+            <div>played by:<input class="control" v-model="character.playerName"/></div>
+            <div>Background:<input v-model="character.background"/></div>
         </div>
         <div>
-          Experience: <input v-model="character.exp">
+          <div>Race:<input v-model="character.race"/></div>
+          <div>Experience:<input v-model="character.exp"></div>
         </div>
         <div class="column">
-            Level: {{character.exp | getLevel}}
+          <div>Class:<input v-model="character.class"/></div>
+          <div>Level {{character.exp | getLevel}}</div>
         </div>
       </div>
     </div>
@@ -26,7 +29,11 @@
         <StatComponent v-for="(s, i) in character.stats" :key="i" :stat=s></StatComponent>
       </div>
       <div class="column is-2">
-        proficiency, saving throws, skills
+        <div class="box">Proficiency Bonus: <input class="numberWidth" type="number" v-model="character.proficiencyBonus"/></div>
+        <div class="box is-rounded">
+          <div> Saving Throws </div>
+          <SavingThrow v-for="(s, i) in character.stats" :key="i" :stat=s :proficiency="character.proficiencyBonus"></SavingThrow>
+        </div>
       </div>
       <div class="column is-3">
        <div> Life component </div>
@@ -55,5 +62,8 @@ module.exports = require('./CharacterSheet.ts');
   }
   .padRight {
     padding-right: 8px
+  }
+  .numberWidth {
+    width: 22px;
   }
 </style>

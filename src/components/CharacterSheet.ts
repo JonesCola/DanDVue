@@ -1,9 +1,10 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Character from '@/models/character';
 import StatComponent from './StatComponent.vue';
+import SavingThrow from '@/components/SavingThrow';
 
 @Component({
-  components : { StatComponent },
+  components : { StatComponent, SavingThrow },
   filters: { getLevel(exp: number): number{ return Math.round(exp / 1000) } },
   })
 export default class CharacterSheet extends Vue {

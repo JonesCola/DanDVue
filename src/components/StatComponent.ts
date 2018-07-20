@@ -6,4 +6,5 @@ import { statType } from '@/models/statType';
 export default class StatComponent extends Vue {
   @Prop() stat! : Stat;
   statType = statType;
+  savingThrowValue : number = 0;
 }
