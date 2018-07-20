@@ -16,7 +16,7 @@ export default new Vuex.Store({
     // this would be a call to the rest service
     getCharacterData(): Character {
       const ret = new Character();
-      ret.level = 1;
+      ret.exp = 3250;
       ret.characterName = 'Balthasar';
       ret.playerName = 'Aaron';
 
