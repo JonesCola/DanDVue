@@ -3,9 +3,10 @@ import Character from '@/models/character';
 import StatComponent from './StatComponent.vue';
 import SavingThrow from '@/components/SavingThrow';
 import Personality from '@/components/Personality';
+import AttackComponent from '@/components/AttackComponent';
 
 @Component({
-  components : { StatComponent, SavingThrow, Personality },
+  components : { StatComponent, SavingThrow, Personality, AttackComponent },
   filters: { getLevel(exp: number): number{ return Math.round(exp / 1000) } },
   })
 export default class CharacterSheet extends Vue {

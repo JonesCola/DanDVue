@@ -37,7 +37,7 @@
       </div>
       <div class="column is-3">
        <div> Life component </div>
-       <div> Attacks and spell casting</div>
+       <div> <AttackComponent :attacks="character.attacks"></AttackComponent></div>
        <div> equipment</div>
       </div>
       <div class="column is-3">

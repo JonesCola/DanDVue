@@ -35,4 +35,7 @@ input {
   margin-left: 3px;
   margin-bottom: 5px;
   }
+input[type=number] {
+  width: 22px;
+}
 </style>

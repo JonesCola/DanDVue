@@ -56,7 +56,7 @@ export default new Vuex.Store({
       ret.stats = stats;
       const attack = new Attack();
       attack.damageDice = 12;
-      attack.damageType = 'slicing';
+      attack.damageType = 'Slicing';
       attack.description = 'Great Ax';
       ret.attacks = [attack];
 
