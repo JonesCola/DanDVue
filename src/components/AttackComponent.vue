@@ -1,7 +1,7 @@
 <template>
     <div class="box is-rounded">
         <div class="columns">
-          <div class="column">  
+          <div class="column">
             <div>Name</div>
             <div v-for="(a, i) in attacks" :key="i">
               <input type="text" v-model=a.description>
@@ -13,7 +13,7 @@
               <input type="number" v-model=a.bonus>
             </div>
           </div>
-          <div class="column is-narrow"> 
+          <div class="column is-narrow">
             <div>Damage</div>
             <div v-for="(a, i) in attacks" :key="i">
               <input type="number" v-model=a.damageDice>
@@ -38,8 +38,8 @@
 
 <script>
 module.exports = require('./AttackComponent.ts');
-</script lang="scss">
-<style scoped>
+</script >
+<style lang="scss" scoped>
 input[type=text] {
     width:100px;
 }

@@ -3,5 +3,5 @@ import Character from '@/models/character';
 
 @Component
 export default class SavingThrow extends Vue {
-  @Prop() character! : Character; 
+  @Prop() character! : Character;
 }

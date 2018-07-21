@@ -3,15 +3,15 @@ import Attack from '@/models/attack';
 
 @Component
 export default class AttackComponent extends Vue {
-  @Prop() attacks! : Attack[]; 
+  @Prop() attacks! : Attack[];
 
-  removeRow(a : Attack){
-    this.attacks.forEach( (item, index) => {
-        if(item === a) this.attacks.splice(index,1);
-      });
+  removeRow(a : Attack) {
+    this.attacks.forEach((item, index) => {
+      if (item === a) this.attacks.splice(index, 1);
+    });
   }
 
-  addRow(){
+  addRow() {
     this.attacks.push(new Attack());
   }
 }
